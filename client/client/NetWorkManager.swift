@@ -43,12 +43,28 @@ func sendTextToServer(_ text: String, completion: @escaping (String) -> Void) {
     let body: [String: String] = ["text": text]
     request.httpBody = try? JSONSerialization.data(withJSONObject: body)
 
+    //応答があるとdataTaskのコールバックが呼ばれる
     URLSession.shared.dataTask(with: request) { data, response, error in
         guard let data = data, error == nil else { return }
 
         if let responseText = String(data: data, encoding: .utf8) {
             DispatchQueue.main.async {
                 completion(responseText)
+            }
+        }
+    }.resume()
+}
+
+func fetchTextFromServer(completion: @escaping (String) -> Void) {
+    guard let url = URL(string: "http://localhost:31577/get") else { return }
+
+    URLSession.shared.dataTask(with: url) { data, response, error in
+        guard let data = data, error == nil else { return }
+
+        if let responseDict = try? JSONSerialization.jsonObject(with: data) as? [String: String],
+           let text = responseDict["text"] {
+            DispatchQueue.main.async {
+                completion(text)
             }
         }
     }.resume()

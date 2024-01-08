@@ -20,14 +20,23 @@ export const init = (serverFactory?: FastifyServerFactory) => {
     return { reply: `Received message: ${message}` };
   });
 
+  let lastText = "";
+
   app.post("/post", async (request, reply) => {
     const { text } = request.body as { text: string };
     console.log(text); // コンソールに表示
+
+    lastText = text;
 
     const responseText = `response: ${text} 届きました`;
     return responseText;
   });
 
+  app.get("/get", async (request, reply) => {
+    return { text: lastText }; // 保存されたテキストを返す
+  });
+
+  //接続確認用
   app.listen({ port: 31577 }, (err, address) => {
     if (err) {
       console.error(err);

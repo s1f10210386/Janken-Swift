@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@fastify/websocket": "^8.3.1",
+    "fastify": "^4.25.2",
+    "fastify-websocket": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.7",
+    "@types/ws": "^8.5.10"
+  }
+}
