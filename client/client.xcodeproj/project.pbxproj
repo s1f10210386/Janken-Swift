@@ -14,6 +14,7 @@
 		2A6CFD8F2B4BA67500D883D8 /* clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6CFD8E2B4BA67500D883D8 /* clientTests.swift */; };
 		2A6CFD992B4BA67500D883D8 /* clientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6CFD982B4BA67500D883D8 /* clientUITests.swift */; };
 		2A6CFD9B2B4BA67500D883D8 /* clientUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6CFD9A2B4BA67500D883D8 /* clientUITestsLaunchTests.swift */; };
+		2A6CFDAA2B4BA7AF00D883D8 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6CFDA92B4BA7AF00D883D8 /* NetWorkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		2A6CFD942B4BA67500D883D8 /* clientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = clientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6CFD982B4BA67500D883D8 /* clientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clientUITests.swift; sourceTree = "<group>"; };
 		2A6CFD9A2B4BA67500D883D8 /* clientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clientUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2A6CFDA92B4BA7AF00D883D8 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				2A6CFD7F2B4BA67400D883D8 /* ContentView.swift */,
 				2A6CFD812B4BA67500D883D8 /* Assets.xcassets */,
 				2A6CFD832B4BA67500D883D8 /* Preview Content */,
+				2A6CFDA92B4BA7AF00D883D8 /* NetWorkManager.swift */,
 			);
 			path = client;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				2A6CFD802B4BA67400D883D8 /* ContentView.swift in Sources */,
 				2A6CFD7E2B4BA67400D883D8 /* clientApp.swift in Sources */,
+				2A6CFDAA2B4BA7AF00D883D8 /* NetWorkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
